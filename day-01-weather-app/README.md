@@ -10,29 +10,15 @@ A clean, responsive weather application that fetches real-time weather data usin
 - **Error handling** — Friendly message displayed for invalid city names.
 - **Fully responsive** — Optimized for both desktop and mobile devices (screens ≤480px).
 
-## Tech Stack
 
-- HTML5
-- CSS3 (with media queries)
-- Vanilla JavaScript (Fetch API)
+## References: 
 
-## Getting Started
+- Tutorial: [Video](https://youtu.be/MIYQR-Ybrn4?list=PLjwm_8O3suyOgDS_Z8AWbbq3zpCmR-WE9)
+- Images: [drive](https://drive.google.com/file/d/1RgSeYljIBzh-ZHIzEFwWmfGIDEMF1bHr/view)
+- [WeatherAPI Current Weather endpoint](https://www.weatherapi.com/docs/):
 
-### Prerequisites
+**Note: I didn't use the same api provided in the video, so, feel free to use anyone available**
 
-- A modern web browser
-- A free API key from [WeatherAPI](https://www.weatherapi.com/)
-
-### Installation
-
-1. Clone or download this repository.
-2. Open `script.js` and replace the `apiKey` value with your own WeatherAPI key:
-
-```javascript
-const apiKey = "your_api_key_here";
-```
-
-3. Open `index.html` in your browser.
 
 ## File Structure
 
@@ -45,23 +31,11 @@ const apiKey = "your_api_key_here";
 
 ## API Reference
 
-This app uses the [WeatherAPI Current Weather endpoint](https://www.weatherapi.com/docs/):
 
 ```
 https://api.weatherapi.com/v1/current.json?key={apiKey}&q={city}
 ```
 
-## Responsive Design
-
-The app includes a mobile-first responsive layout with a breakpoint at **480px**:
-
-| Element      | Desktop | Mobile (≤480px) |
-|--------------|---------|-----------------|
-| Card padding | 40px 35px | 25px 20px |
-| Search input | 60px tall | 48px tall |
-| Temperature  | 80px font | 56px font |
-| City name    | 45px font | 32px font |
-| Weather icon | 170px     | 130px |
 
 ## License
 
