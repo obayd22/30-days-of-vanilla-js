@@ -30,7 +30,7 @@ Each day gets its own folder and its own live URL. Click around.
 
 ## Want to follow along?
 
-**Just star the this repo ⭐ and start!**
+**Just star this repo ⭐ and start!**
 
 I was following a tutorial (but changing things a bit).. so, you will find every project in its own folder with its own:
 **YouTube Tutorial** 
