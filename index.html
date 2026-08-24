@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days of Vanilla JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #56CCF2, #2F80ED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .day-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .day-card:hover {
+            border-color: #56CCF2;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(86, 204, 242, 0.1);
+        }
+        .day-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #56CCF2, #2F80ED);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .day-info h3 {
+            font-size: 1rem;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+        .day-info span {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        .day-card.empty {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .day-card.empty .day-number {
+            background: #334155;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #56CCF2;
+            text-decoration: none;
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.8rem; }
+            .days-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>30 Days of Vanilla JS</h1>
+            <p>One project every day. No frameworks. Just JavaScript.</p>
+        </header>
+
+        <div class="days-grid" id="daysGrid"></div>
+
+        <footer>
+            <p>Built by <a href="https://github.com/obayd22" target="_blank">@obayd22</a> &middot; 
+            <a href="https://github.com/obayd22/30-days-of-vanilla-js" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const projects = [
+            { day: 1, name: "Weather App", folder: "day-01-weather-app", done: true },
+            { day: 2, name: "Todo List", folder: "day-02-todo-list", done: false },
+            { day: 3, name: "Calculator", folder: "day-03-calculator", done: false },
+            { day: 4, name: "Coming Soon", folder: "", done: false },
+            { day: 5, name: "Coming Soon", folder: "", done: false },
+            { day: 6, name: "Coming Soon", folder: "", done: false },
+            { day: 7, name: "Coming Soon", folder: "", done: false },
+            { day: 8, name: "Coming Soon", folder: "", done: false },
+            { day: 9, name: "Coming Soon", folder: "", done: false },
+            { day: 10, name: "Coming Soon", folder: "", done: false },
+            { day: 11, name: "Coming Soon", folder: "", done: false },
+            { day: 12, name: "Coming Soon", folder: "", done: false },
+            { day: 13, name: "Coming Soon", folder: "", done: false },
+            { day: 14, name: "Coming Soon", folder: "", done: false },
+            { day: 15, name: "Coming Soon", folder: "", done: false },
+            { day: 16, name: "Coming Soon", folder: "", done: false },
+            { day: 17, name: "Coming Soon", folder: "", done: false },
+            { day: 18, name: "Coming Soon", folder: "", done: false },
+            { day: 19, name: "Coming Soon", folder: "", done: false },
+            { day: 20, name: "Coming Soon", folder: "", done: false },
+            { day: 21, name: "Coming Soon", folder: "", done: false },
+            { day: 22, name: "Coming Soon", folder: "", done: false },
+            { day: 23, name: "Coming Soon", folder: "", done: false },
+            { day: 24, name: "Coming Soon", folder: "", done: false },
+            { day: 25, name: "Coming Soon", folder: "", done: false },
+            { day: 26, name: "Coming Soon", folder: "", done: false },
+            { day: 27, name: "Coming Soon", folder: "", done: false },
+            { day: 28, name: "Coming Soon", folder: "", done: false },
+            { day: 29, name: "Coming Soon", folder: "", done: false },
+            { day: 30, name: "Coming Soon", folder: "", done: false },
+        ];
+
+        const grid = document.getElementById('daysGrid');
+
+        projects.forEach(p => {
+            const card = document.createElement(p.done ? 'a' : 'div');
+            if (p.done) {
+                card.href = p.folder + '/';
+            }
+            card.className = 'day-card' + (p.done ? '' : ' empty');
+            card.innerHTML = `
+                <div class="day-number">${p.day}</div>
+                <div class="day-info">
+                    <h3>${p.name}</h3>
+                    <span>${p.done ? 'Click to view →' : 'Not started yet'}</span>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
