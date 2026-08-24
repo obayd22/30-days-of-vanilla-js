@@ -33,8 +33,8 @@ Each day gets its own folder and its own live URL. Click around.
 **Just star this repo ⭐ and start!**
 
 I was following a tutorial (but changing things a bit).. so, you will find every project in its own folder with its own:
-**YouTube Tutorial** 
-Live Demo & README file
+- YouTube Tutorial 
+- Live Demo & README file
 
 ### Feel free to fork this repo, steal ideas, or build your own 30-day challenge. If you do, let me know — I'd love to see what you make.
 
