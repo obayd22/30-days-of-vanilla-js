@@ -11,7 +11,7 @@ A clean, responsive weather application that fetches real-time weather data usin
 - [WeatherAPI Current Weather endpoint](https://www.weatherapi.com/docs/)
 
 
-**Note: I didn't use the same api provided in the video, so, feel free to use anyone available**
+**Note: I didn't use the same api provided in the video, so, feel free to use anyone available.**
 
 
 ## File Structure
