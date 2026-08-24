@@ -2,16 +2,20 @@
 
 > One project. Every day. Almost Zero frameworks. Just me, my keyboard, and the browser console.
 
-This repo is my personal challenge to build **30 small projects in 30 days** using nothing but plain HTML, CSS, and JavaScript. Mostly No frameworks .. just JS
+
+### This repo is my personal challenge to build **30 small projects in 30 days** using nothing but plain HTML, CSS, and JavaScript. Mostly No frameworks .. just JS
+
 ---
 
-## Why am I doing this?
+
+### Why am I doing this?
 
 To enhance my HTML, CSS, JS skills and understand the fundamentals & Have Fun 😁 ..
 
 ---
 
-## Live Demo
+
+### Live Demo
 
 👉 [Check out all the projects here](https://obayd22.github.io/30-days-of-vanilla-js/)
 
@@ -19,7 +23,8 @@ Each day gets its own folder and its own live URL. Click around.
 
 ---
 
-## Tech used
+
+### Tech used
 
 - HTML5
 - CSS3 (flexbox, grid, media queries, the usual)
@@ -28,7 +33,7 @@ Each day gets its own folder and its own live URL. Click around.
 
 ---
 
-## Want to follow along?
+### Want to follow along?
 
 **Just star this repo ⭐ and start!**
 
