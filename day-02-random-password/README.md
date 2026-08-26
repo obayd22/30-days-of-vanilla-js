@@ -21,3 +21,4 @@ A simple, responsive web app that generates strong random passwords with one cli
 
 ## Resources:
 - Video: [here](https://youtu.be/Xrsb9SiF3a8?list=PLjwm_8O3suyOgDS_Z8AWbbq3zpCmR-WE9)
+- Live Demo: https://obayd22.github.io/30-days-of-vanilla-js/day-02-random-password/
