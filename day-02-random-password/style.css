@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #231e3b;
+    color: #fff;
+
+}
+.container {
+    margin: 12%;
+    width: 90%;
+    max-width: 700px;
+}
+
+.display {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.container h1 span {
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+    padding-bottom: 7px;
+}
+
+.display img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.display input {
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+}
+
+.container button img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.container button {
+    border: 0;
+    outline: 0;
+    background: #019f55;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ---------- Responsive (mobile) ---------- */
+@media (max-width: 600px) {
+    .container {
+        margin: 10% 6%;
+        width: 88%;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .display {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        margin-top: 35px;
+        margin-bottom: 24px;
+        padding: 20px 16px;
+    }
+
+    .display input {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .display img {
+        align-self: flex-end;
+        width: 26px;
+    }
+
+    .container button {
+        width: 100%;
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+
+    .container button img {
+        width: 22px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container h1 {
+        font-size: 26px;
+    }
+
+    .display input {
+        font-size: 18px;
+    }
+}
