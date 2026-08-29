@@ -1,4 +1,4 @@
-# QR Code Generator
+# Speed Typing Game
 
 A simple and responsive **Speed Typing Game** built with **HTML, CSS, and Vanilla JavaScript**.
 
