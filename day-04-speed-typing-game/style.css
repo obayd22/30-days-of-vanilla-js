@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: url(images/wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body,
+.quote-input {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+}
+
+.timer {
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.quote-display {
+  margin-bottom: 1rem;
+  margin-left: calc(1rem + 2px);
+  margin-right: calc(1rem + 2px);
+}
+
+.quote-input {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  resize: none;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.correct {
+  color: rgb(92, 218, 92);
+}
+
+.incorrect {
+  color: rgb(246, 66, 66);
+}
+
+/*Mobile View*/
+@media (max-width: 480px) {
+  body {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+  .timer {
+    top: 1rem;
+    font-size: 2rem;
+  }
+  .container {
+    padding: 1rem;
+    border-radius: 0.6rem;
+  }
+  .quote-display {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .quote-input {
+    min-height: 7rem;
+    padding: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
